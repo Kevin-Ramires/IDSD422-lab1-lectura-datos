@@ -1,9 +1,11 @@
-# leer_json.py — Cargar el reporte JSON de la API (Python)
+# leer_csv.py — Cargar el reporte CSV del ERP (Python)
 # Completa los pasos marcados con TODO. Ejecuta desde la raíz del repositorio:
-#   python scripts/leer_json.py
+#   python scripts/leer_csv.py
 
-# TODO 1: importa json y pandas
-# TODO 2: carga data/ventas.json con json.load
-# TODO 3: convierte la lista de diccionarios en un DataFrame
-#         (recuerda del cap. 2: el JSON no llega como tabla directa)
-# TODO 4: imprime las dimensiones y las primeras filas
+# TODO 1: importa pandas y carga data/ventas.csv en un DataFrame
+import pandas as pd
+ventas = pd.read_csv("data/ventas.csv")
+# TODO 2: imprime las dimensiones (filas, columnas) del DataFrame
+ventas.shape
+# TODO 3: imprime las primeras filas para revisar las columnas
+ventas.head()
